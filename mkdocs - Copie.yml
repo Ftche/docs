@@ -1,0 +1,76 @@
+site_name: My Docs
+theme: material #bootstrap4
+  font:
+    text: 'Ubuntu'
+    code: 'Ubuntu Mono'
+  logo: 'images/logo.png'
+  favicon: 'images/favicon.ico'
+
+site_description: MkDocs Themes
+site_author: J&M
+
+plugins:
+    - search
+
+#copyright: Copyright &copy; 2014 <a href="https://twitter.com/_tomchristie">Tom Christie</a>, <a href="http://www.dougalmatthews.com/">Dougal Matthews</a>.
+
+extra:
+    social:
+        - type: gitlab
+          link: https://gitlab.com/alinex
+        - type: github
+          link: https://github.com/alinex
+        - type: book
+          link: https://alinex.gitlab.io
+        - type: home
+          link: https://alinex.de
+        - type: envelope
+          link: mailto:info@alinex.de
+
+# Project information
+site_name: 'Material for MkDocs'
+site_description: 'A Material Design theme for MkDocs'
+site_author: 'Martin Donath'
+site_url: 'https://squidfunk.github.io/mkdocs-material/'
+
+# Repository
+repo_name: 'squidfunk/mkdocs-material'
+repo_url: 'https://github.com/squidfunk/mkdocs-material'
+
+# Copyright
+copyright: 'Copyright &copy; 2016 - 2017 Martin Donath'
+
+# Configuration
+theme:
+  name: 'material'
+  language: 'en'
+  palette:
+    primary: 'indigo'
+    accent: 'indigo'
+  font:
+    text: 'Roboto'
+    code: 'Roboto Mono'
+
+# Customization
+extra:
+  manifest: 'manifest.webmanifest'
+  social:
+    - type: 'github'
+      link: 'https://github.com/squidfunk'
+    - type: 'twitter'
+      link: 'https://twitter.com/squidfunk'
+    - type: 'linkedin'
+      link: 'https://www.linkedin.com/in/squidfunk'
+
+# Google Analytics
+google_analytics:
+  - 'UA-XXXXXXXX-X'
+  - 'auto'
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true

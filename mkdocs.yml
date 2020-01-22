@@ -1,0 +1,89 @@
+# Project information
+site_name: 'Felicity EHR Doc'
+site_description: 'Documentation for the Felicity EHR Application'
+site_author: 'TCHEWA Franklin'
+site_url: ''
+#site_dir: 'site'
+docs_dir: 'docs'
+
+# use_directory_urls
+use_directory_urls: true
+
+# Page tree
+nav:
+  - Home: index.md
+  - Examples: examples.md
+  - Sub-pages:
+    - sub-page1: sub-dir/sub-page.md
+    - sub-page2: sub-dir/sub-dir-2/sub-page-2.md
+  - License: licence.md
+
+
+# Repository
+#repo_name: 'squidfunk/mkdocs-material'
+#repo_url: 'https://github.com/squidfunk/mkdocs-material'
+
+# Copyright
+copyright: 'Copyright &copy; 2018 -  Felicity'
+
+# Configuration
+theme:
+  name: null
+  custom_dir: material
+
+  # 404 page
+  static_templates:
+    - 404.html
+
+  # Don't include MkDocs' JavaScript
+  include_search_page: false
+  search_index_only: true
+
+  # Default values, taken from mkdocs_theme.yml
+  language: en
+  feature:
+    tabs: true
+  palette:
+    primary: purple
+    accent: indigo
+  font:
+    text: Roboto
+    code: Roboto Mono
+  logo: 'images/logo.png'
+  favicon: 'images/logo.png'
+#  logo:
+#    icon: "\uE80C"
+
+# Customization
+extra:
+  #manifest: 'manifest.webmanifest'
+  social:
+    - type: 'github'
+      link: 'https://github.com/squidfunk'
+    - type: 'twitter'
+      link: 'https://twitter.com/squidfunk'
+    - type: 'linkedin'
+      link: 'https://www.linkedin.com/in/squidfunk'
+
+# Google Analytics
+google_analytics:
+  - 'UA-XXXXXXXX-X'
+  - 'auto'
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
+
+# Plugins
+plugins:
+    - search
+#        separator: '[\s\-\.]+'
+#    - minify
+#    - git-revision-date-localized:
+#        type: datetime
+
+# Prebuild_index
