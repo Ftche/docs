@@ -1,14 +1,16 @@
-image: python:3.7.6-buster
+FROM python:3.7.6-buster
 
-before_script:
-  - pip install --upgrade pip && pip install -r requirements.txt
+LABEL maintainer="peaceiris"
 
-pages:
-  script:
-    - mkdocs build
-    - mv site public
-  artifacts:
-    paths:
-    - public
-  only:
-  - master
+# Install requirements
+COPY ./requirements.txt /root
+WORKDIR /root
+RUN pip install --upgrade pip && pip install -r requirements.txt
+
+# Expose MkDocs development server port
+EXPOSE 8000
+
+# Start development server by default
+ENTRYPOINT ["mkdocs"]
+CMD ["serve", "--dev-addr=0.0.0.0:8000"]
+
