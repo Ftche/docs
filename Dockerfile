@@ -1,16 +1,28 @@
-FROM python:3.7.6-buster
+name: github pages
 
-LABEL maintainer="peaceiris"
+on:
+  push:
+    branches:
+      - master
 
-# Install requirements
-COPY ./requirements.txt /root
-WORKDIR /root
-RUN pip install --upgrade pip && pip install -r requirements.txt
+jobs:
+  deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v1
+        # with:
+        #   submodules: true
 
-# Expose MkDocs development server port
-EXPOSE 8000
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.64.0'
 
-# Start development server by default
-ENTRYPOINT ["mkdocs"]
-CMD ["serve", "--dev-addr=0.0.0.0:8000"]
+      - name: Build
+        run: hugo --minify
 
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          publish_dir: ./public
