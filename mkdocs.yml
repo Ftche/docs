@@ -1,6 +1,6 @@
 # Project information
-site_name: 'Felicity EHR Doc'
-site_description: 'Documentation for the Felicity EHR Application'
+site_name: ' Doc'
+site_description: 'Documentation for  Application'
 site_author: 'TCHEWA Franklin'
 site_url: ''
 #site_dir: 'site'
@@ -24,7 +24,7 @@ nav:
 #repo_url: 'https://github.com/squidfunk/mkdocs-material'
 
 # Copyright
-copyright: 'Copyright &copy; 2018 -  Felicity'
+copyright: 'Copyright &copy; 2018 - '
 
 # Configuration
 theme:
