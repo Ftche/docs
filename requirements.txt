@@ -30,7 +30,7 @@ pep562==1.0
 Pillow==6.1.0
 pipenv==2018.11.26
 PyGithub==1.45
-Pygments==2.5.2
+Pygments==2.7.4
 PyJWT==1.7.1
 pylint==2.3.1
 pymdown-extensions==6.2.1
