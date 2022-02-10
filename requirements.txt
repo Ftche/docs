@@ -6,7 +6,7 @@ chardet==3.0.4
 Click==7.0
 colorama==0.4.1
 Deprecated==1.2.7
-Django==2.2.5
+Django==2.2.27
 django-crispy-forms==1.7.2
 gitdb2==2.0.6
 GitPython==3.0.5
